@@ -12,7 +12,7 @@ export default new Router({
             component: Groceries
         },
         {
-            path: '/about',
+            path: '/about/:name',
             name: 'about',
             component: About
         }
