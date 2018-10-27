@@ -28,21 +28,16 @@
 <script>
 export default {
   name: 'Groceries',
-  props: {
-    
-  }
-
-  data(){
+  data() {
      return {
-      grocery:'';
+      grocery:'',
       groceries:[
        {"grocery":"Cooking oil"},
        {"grocery":"Olive oil"}
       ]
      }
-  }
-
-  methods(){
+  },
+  methods:{
 
     addGrocery(){
       
@@ -50,7 +45,7 @@ export default {
 
       this.grocery='';
 
-    }
+    },
 
     removeGrocery(id){
 
