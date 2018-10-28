@@ -1,9 +1,9 @@
 <template>
   <div class="hello">
     <div class="holder">
-       <form @submit.prevent="addSkill">
+       <form @submit.prevent="addGrocery">
 
-       <input type="text" placeholder="Add a grocery to the grocery list..." v-model="grocery" v-validate="'min:5'" name="skill" >
+       <input type="text" placeholder="Add a grocery to the grocery list..." v-model="grocery" v-validate="'min:5'" name="grocery" >
        <transition class="alert-in" enter-active-class="animated flipInX" leave-active-class="animated flipOutX" >
        <p class="alert"  v-if="errors.has('grocery')">{{error.first('grocery')}} </p>
        </transition>
@@ -14,7 +14,7 @@
        <transition-group enter-active-class="animated bounceInUp" leave-active-class="animated  bounceOutDown">
        <li v-for="(data, index) in groceries" :key='index'>
              {{data.grocery}}
-             <i class="fa fa-minus-circle" v-on:click="remove(index)"></i>
+             <i class="fa fa-minus-circle" v-on:click="removeGrocery(index)"></i>
        </li>
        </transition-group>
 
