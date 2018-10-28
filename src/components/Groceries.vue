@@ -3,7 +3,7 @@
     <div class="holder">
        <form @submit.prevent="addGrocery">
 
-       <input type="text" placeholder="Add a grocery to the grocery list..." v-model="grocery" v-validate="'min:5'" name="grocery" >
+       <input type="text" placeholder="Add an item to the grocery list..." v-model="grocery" v-validate="'min:5'" name="grocery" >
        <transition class="alert-in" enter-active-class="animated flipInX" leave-active-class="animated flipOutX" >
        <p class="alert"  v-if="errors.has('grocery')">{{error.first('grocery')}} </p>
        </transition>
